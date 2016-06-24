@@ -7,11 +7,16 @@ var methodOverride = require('method-override');
 var morgan		   = require('morgan');
 var fs 			   = require('fs');
 var path 		   = require('path');
+var mongojs = require('mongojs');
+var db = mongojs('personnelwebsite',['personnelwebsite']);
+var bodyParser = require('body-parser');
 
 // configuration ===========================================
 	
 // config files
-var db = require('./config/db');
+//var db = require('./config/db');
+
+app.use(bodyParser.json());
 
 var port = process.env.PORT || 5000; // set our port
 // mongoose.connect(db.url); // connect to our mongoDB database (commented out after you enter in your own credentials)
@@ -28,6 +33,15 @@ app.use(morgan('dev'));
 
 app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
+app.use(bodyParser.json());
+
+app.post('/personnelwebsite',function(req,res){
+    console.log('i recieved post request');
+    console.log(req.body)
+    db.personnelwebsite.insert(req.body,function(err,doc){
+        res.json(doc)
+    })
+});
 
 // routes ==================================================
 require('./app/routes')(app); // pass our application into our routes
