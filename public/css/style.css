@@ -63,7 +63,7 @@ body a:hover{
 }
 .header-left img {
     width: 100%;
-    border: 5px solid #FF9933;
+    border: 5px solid #CE7012;
 }
 .header-right {
     padding-left: 3em;
@@ -102,7 +102,7 @@ body a:hover{
 	color: #C7C7C7;
 }
 .header-right.falinks a:hover{
-	color: #FF9933;
+	color: #CE7012;
 }
 ul.address {
     margin-top: 1px;
@@ -132,7 +132,7 @@ ul.address li ul.address-text li a:hover{
 /*--//banner-top--*/
 /*--top-nav--*/
 .top-nav {
-    background: #FF9933;
+    background: #CE7012;
 }
 .nav > li {
     display: inline-block;
@@ -148,7 +148,7 @@ ul.nav.navbar li a {
     font-family: 'Overlock', cursive;
 }
 ul.nav.navbar li a:hover,ul.nav.navbar li a.active,ul.nav.navbar li a:focus{
-    color: #FF9933;
+    color: #CE7012;
     background: #fff;
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
@@ -164,7 +164,7 @@ ul.nav.navbar li a:hover,ul.nav.navbar li a.active,ul.nav.navbar li a:focus{
 h3.title {
     font-size: 4em;
     text-align: center;
-    color: #FF9933;
+    color: #CE7012;
     border-bottom: 4px double rgba(247, 197, 106, 0.35);
     padding-bottom: 0.2em;
 	margin-bottom: 1em;
@@ -178,13 +178,13 @@ p {
     padding-left: 5em;
 }
 .about-right ul {
-    border: 3px double #FF9933;
+    border: 3px double #CE7012;
     padding: 1em 2em;
 }
 .about-right h5 {
     font-size: 2em;
     text-align: center;
-    color: #FF9933;
+    color: #CE7012;
 }
 .about-right ul li {
     display: block;
@@ -211,7 +211,7 @@ p {
 }
 .work-info h4 {
     font-size: 1.2em;
-    background: #FF9933;
+    background: #CE7012;
     display: inline-block;
     padding: .6em 1.2em;
     color: #fff;
@@ -227,7 +227,7 @@ p {
     right: -14px;
     border-style: solid;
     border-width: 10px 0 10px 16px;
-    border-color: transparent transparent transparent #FF9933;
+    border-color: transparent transparent transparent #CE7012;
 }
 .work-info h5 {
     font-size: 1.3em;
@@ -240,7 +240,7 @@ p {
 .work-info h5 span.glyphicon {
     font-size: 0.9em;
     color: #fff;
-    background: #FF9933;
+    background: #CE7012;
     padding: 1em;
     -webkit-border-radius: 70%;
     -moz-border-radius: 70%;
@@ -597,8 +597,8 @@ h2.resp-accordion {
     font-size: 1.1em;
     margin: 1em 0 0 0;
     -webkit-appearance: none;
-    background: #FF9933;
-    border: 2px solid #FF9933;
+    background: #CE7012;
+    border: 2px solid #CE7012;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
@@ -607,7 +607,7 @@ h2.resp-accordion {
 }
 .contact-form input[type="submit"]:hover {
     background: none;
-    color: #FF9933;
+    color: #CE7012;
 }
 ::-webkit-input-placeholder {
 	color:#fff !important;
@@ -626,10 +626,18 @@ h2.resp-accordion {
 }
 /*--//contact--*/
 /*--footer--*/
-.footer {
+/*.footer {
     padding: 2em 0;
     text-align: center;
     background: #1F1F1F;
+}*/
+.footer {
+    padding: 0em;
+    text-align: center;
+    background: #1F1F1F;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }
 .footer p {
     color: #fff;
@@ -642,8 +650,8 @@ h2.resp-accordion {
     color: #fff;
 }
 .footer.falinks a{
-	color:#FF9933;
-	background-color: #FF9933;
+	color:#CE7012;
+	background-color: #CE7012;
 
 }
 /*--//footer--*/
@@ -1176,5 +1184,197 @@ h3.title {
     z-index: 9999;
     width: 100%;
     height: 50px;
-    background-color: #FF9933;
+    background-color: #CE7012;
+}
+
+#wowslider-container1 {
+    /*	overflow: hidden; */
+    zoom: 1;
+    width:828px;
+    height:524px;
+    margin:0 auto;
+    z-index:100;
+    background-image: url(./bg.png);
+}
+#wowslider-container1 ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+#wowslider-container1 .ws_images{
+    position: absolute;
+    left:14px;
+    top:14px;
+    width:800px;
+    height:300px;
+    overflow:hidden;
+}
+#wowslider-container1 .ws_images a{
+    color:transparent;
+}
+
+#wowslider-container1 .ws_images img{
+    top:0;
+    left:0;
+    border:none 0;
+    max-width: none;
+}
+#wowslider-container1 a{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+#wowslider-container1  .ws_bullets {
+    font-size: 0px;
+    padding: 10px;
+    float: left;
+    position:absolute;
+    z-index:70;
+}
+#wowslider-container1  .ws_bullets div{
+    position:relative;
+    float:left;
+}
+#wowslider-container1 .ws_bullets a {
+    font:bold 10px/22px Tahoma,sans-serif;
+    color:#000;
+    text-align:center;
+    margin-left:4px;
+    width:22px;
+    height:22px;
+    background: url(./bullet.png) left top;
+    opacity:0.8;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+    float: left;
+    position:relative;
+}
+#wowslider-container1 .ws_bullets a.ws_selbull, #wowslider-container1 .ws_bullets a:hover{
+    background-position: right top;
+    color:#D4D4D4;
+}
+#wowslider-container1 a.ws_next, #wowslider-container1 a.ws_prev {
+    position:absolute;
+    display:none;
+    top:50%;
+    margin-top:-33px;
+    z-index:60;
+    height: 66px;
+    width: 59px;
+    background-image: url(./arrows.png);
+}
+#wowslider-container1 a.ws_next{
+    background-position: 100% 0;
+    right:14px;
+}
+#wowslider-container1 a.ws_prev {
+    left:14px;
+    background-position: 0 0;
+}
+#wowslider-container1 a.ws_next:hover{
+    background-position: 100% 100%;
+}
+#wowslider-container1 a.ws_prev:hover {
+    background-position: 0 100%;
+}
+* html #wowslider-container1 a.ws_next,* html #wowslider-container1 a.ws_prev{display:block}
+#wowslider-container1:hover a.ws_next, #wowslider-container1:hover a.ws_prev {display:block}
+#wowslider-container1 .ws-title{
+    position: absolute;
+    bottom:80px;
+    left: 14px;
+    margin-right:5px;
+    z-index: 50;
+    opacity:0.8;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+    padding:12px;
+    color: #d4d4d4;
+    text-transform:uppercase;
+    background:#000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    -moz-border-radius:0 10px 10px 0;
+    border-radius:0 10px 10px 0;
+}
+#wowslider-container1 .ws-title div{
+    padding-top:5px;
+    font-size: 13px;
+    text-transform:none;
+}
+#wowslider-container1  a.wsl{
+    display:none;
+}/* bottom center */
+#wowslider-container1  .ws_bullets {
+    bottom: 11px;
+    left:50%;
+}
+#wowslider-container1  .ws_bullets div{
+    left:-50%;
+}
+#wowslider-container1 ul{
+    position:relative;
+    width: 300%;
+    left:0%;
+    animation: wsBasic 18.6s infinite;
+    -moz-animation: wsBasic 18.6s infinite;
+    -webkit-animation: wsBasic 18.6s infinite;
+}
+#wowslider-container1 ul li{
+    float:left;
+    width:800px;
+}
+@keyframes wsBasic{0%{left:-0%} 24.19%{left:-0%} 33.33%{left:-100%} 57.53%{left:-100%} 66.67%{left:-200%} 90.86%{left:-200%} }
+@-moz-keyframes wsBasic{0%{left:-0%} 24.19%{left:-0%} 33.33%{left:-100%} 57.53%{left:-100%} 66.67%{left:-200%} 90.86%{left:-200%} }
+@-webkit-keyframes wsBasic{0%{left:-0%} 24.19%{left:-0%} 33.33%{left:-100%} 57.53%{left:-100%} 66.67%{left:-200%} 90.86%{left:-200%} }
+
+#wowslider-container1 .ws_bullets  a img{
+    text-indent:0;
+    display:block;
+    bottom:25px;
+    left:-80px;
+    visibility:hidden;
+    position:absolute;
+    -moz-box-shadow: 0 0 5px #999999;
+    box-shadow: 0 0 5px #999999;
+    border: 5px solid #0e0e0e;
+    max-width:none;
+}
+#wowslider-container1 .ws_bullets a:hover img{
+    visibility:visible;
+}
+
+#wowslider-container1 .ws_bulframe div div{
+    height:90px;
+    overflow:visible;
+    position:relative;
+}
+#wowslider-container1 .ws_bulframe div {
+    left:0;
+    overflow:hidden;
+    position:relative;
+    width:160px;
+    background-color:#0e0e0e;
+}
+#wowslider-container1  .ws_bullets .ws_bulframe{
+    display:none;
+    bottom:25px;
+    overflow:visible;
+    position:absolute;
+    cursor:pointer;
+    -moz-box-shadow: 0 0 5px #999999;
+    box-shadow: 0 0 5px #999999;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border: 5px solid #0e0e0e;
+}
+#wowslider-container1 .ws_bulframe span{
+    display:block;
+    position:absolute;
+    bottom:-11px;
+    margin-left:-1px;
+    left:80px;
+    background:url(./triangle.png);
+    width:15px;
+    height:6px;
 }

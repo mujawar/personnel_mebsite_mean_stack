@@ -8,10 +8,15 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'ProfileController'
 		})
 
-		.when('/home', {
-			templateUrl: 'views/home.html',
+		.when('/trip', {
+			templateUrl: 'views/Trip.html',
 			controller: 'MainController'
+		})
+		.when('/contact', {
+			templateUrl: 'views/contact.html',
+			controller: 'contactController'
 		});
+
 
 	$locationProvider.html5Mode(true);
 

@@ -1,3 +1,4 @@
+/*
 angular.module('ProfileCtrl', []).controller('ProfileController', function($scope,$http) {
 
 	$scope.tagline = 'The square root of life is pi!';
@@ -13,4 +14,4 @@ angular.module('ProfileCtrl', []).controller('ProfileController', function($scop
 	}
 
 
-});
+});*/
