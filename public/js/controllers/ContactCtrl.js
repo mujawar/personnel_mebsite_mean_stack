@@ -1,7 +1,7 @@
 /**
  * Created by arif on 31/7/16.
  */
-angular.module('contactCtrl', []).controller('contactController', function($scope,$http) {
+angular.module('ContactCtrl', []).controller('ContactController', function($scope,$http) {
     console.log('initailazing contact');
 
     $scope.tagline = 'The square root of life is pi!';
@@ -15,6 +15,5 @@ angular.module('contactCtrl', []).controller('contactController', function($scop
             $scope.successMessage="Thanku for contacting me i will get back to you as earliest!"
         })
     }
-
 
 });
