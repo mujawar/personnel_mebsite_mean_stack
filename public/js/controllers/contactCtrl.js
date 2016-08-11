@@ -2,6 +2,7 @@
  * Created by arif on 31/7/16.
  */
 angular.module('ProfileCtrl', []).controller('contactController', function($scope,$http) {
+    console.log('initailazing contact');
 
     $scope.tagline = 'The square root of life is pi!';
 
