@@ -18,7 +18,7 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
-var port = process.env.PORT || 5000; // set our port
+var port = process.env.PORT || 9000; // set our port
 // mongoose.connect(db.url); // connect to our mongoDB database (commented out after you enter in your own credentials)
 
 // create a write stream (in append mode)
