@@ -10,11 +10,32 @@ var path 		   = require('path');
 var mongojs = require('mongojs');
 var db = mongojs('personnelwebsite',['personnelwebsite']);
 var bodyParser = require('body-parser');
+var path = require('path');
+var nodemailer = require("nodemailer");
+
+// create reusable transport method (opens pool of SMTP connections)
+var smtpTransport   = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: "dev.medibox@gmail.com",
+        pass: "medibox123"
+    }
+});
+
+// config files
+//var db = require('./config/db');
+/*smtpTransport   = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        "user": "dev.medibox@gmail.com",
+        "pass": "medibox123"
+    }
+})*/
+
 
 // configuration ===========================================
 	
-// config files
-//var db = require('./config/db');
+
 
 app.use(bodyParser.json());
 
@@ -42,6 +63,33 @@ app.post('/personnelwebsite',function(req,res){
         res.json(doc)
     })
 });
+
+app.post('/sendFeedbackMail',function(req,res){
+    console.log('asasasasas',req.body);
+    if(req.body){
+
+        var mailOptions = {
+            to: req.body.to, // list of receivers
+            subject: req.body.subject, // Subject line
+            text:req.body.data.message
+        }
+
+        // send mail with defined transport object
+        console.log("mailOptions: " +JSON.stringify(mailOptions));
+        smtpTransport.sendMail(mailOptions, function(error, response){
+            if(error){
+                console.log(error);
+            }else{
+                console.log('response'+JSON.stringify(response));
+                res.json(response)
+            }
+        });
+    }
+
+})
+
+
+
 
 // routes ==================================================
 require('./app/routes')(app); // pass our application into our routes
