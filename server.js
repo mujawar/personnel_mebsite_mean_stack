@@ -66,12 +66,12 @@ app.post('/personnelwebsite',function(req,res){
 
 app.post('/sendFeedbackMail',function(req,res){
     console.log('asasasasas',req.body);
+    var data = "name:  " +req.body.data.name  +   "  email:  " +req.body.data.email   +  "    phone:  "   +  req.body.data.phone + "   message:  " + req.body.data.message;
     if(req.body){
-
         var mailOptions = {
             to: req.body.to, // list of receivers
             subject: req.body.subject, // Subject line
-            text:req.body.data.message
+            text:data
         }
 
         // send mail with defined transport object

@@ -23,6 +23,8 @@ angular.module('ContactCtrl', []).controller('ContactController', function($scop
                 console.log('result' + JSON.stringify(result));
             })
 
+            $scope.contact = ''
+
 
         })
     }
