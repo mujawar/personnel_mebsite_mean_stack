@@ -12,7 +12,10 @@ var db = mongojs('personnelwebsite',['personnelwebsite']);
 var bodyParser = require('body-parser');
 var path = require('path');
 var nodemailer = require("nodemailer");
+var AWS = require('aws-sdk');
+var aws= new AWS.EC2();
 
+/*
 // create reusable transport method (opens pool of SMTP connections)
 var smtpTransport   = nodemailer.createTransport({
     service: 'Gmail',
@@ -21,16 +24,18 @@ var smtpTransport   = nodemailer.createTransport({
         pass: "medibox123"
     }
 });
-
-// config files
-//var db = require('./config/db');
-/*smtpTransport   = nodemailer.createTransport({
-    service: 'Gmail',
+*/
+var smtpTransport = require('nodemailer-smtp-transport');
+var mail_details = {
+    host: 'email-smtp.eu-west-1.amazonaws.com',
+    port: 587,
+    service: "Gmail",
     auth: {
-        "user": "dev.medibox@gmail.com",
-        "pass": "medibox123"
+        user: "dev.medibox@gmail.com",
+        pass: "medibox123"
     }
-})*/
+}
+var smtpTransport = nodemailer.createTransport(mail_details);
 
 
 // configuration ===========================================
