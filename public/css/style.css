@@ -1380,3 +1380,29 @@ h3.title {
 .a.hover{
     color: #0FF;
 }
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.myImg:hover {opacity: 0.7;}
+
+.grow img {
+    height: 300px;
+    width: 300px;
+
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.grow img:hover {
+    width: 400px;
+    height: 400px;
+}
+
+
+.zoomin img { height: 350px; width: 381px; -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; transition: all 2s ease; }
+.zoomin img:hover { width: 403px; height: 403px; }
