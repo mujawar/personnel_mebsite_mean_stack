@@ -57,7 +57,7 @@ app.use(express.static(__dirname + '/public')); // set the static files location
 app.use(bodyParser.json());
 
 app.post('/personnelwebsite',function(req,res){
-    console.log('i recieved post request');
+    //console.log('i recieved post request');
     console.log(req.body)
     db.personnelwebsite.insert(req.body,function(err,doc){
         res.json(doc)
