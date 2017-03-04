@@ -11,36 +11,21 @@ var mongojs = require('mongojs');
 var db = mongojs('personnelwebsite',['personnelwebsite']);
 var bodyParser = require('body-parser');
 var path = require('path');
-var nodemailer = require("nodemailer");
+//var nodemailer = require("nodemailer");
 
 // create reusable transport method (opens pool of SMTP connections)
-var smtpTransport   = nodemailer.createTransport({
+/*var smtpTransport   = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
         user: "dev.medibox@gmail.com",
         pass: "medibox123"
     }
-});
-
-// config files
-//var db = require('./config/db');
-/*smtpTransport   = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-        "user": "dev.medibox@gmail.com",
-        "pass": "medibox123"
-    }
-})*/
-
-
-// configuration ===========================================
-	
+});*/
 
 
 app.use(bodyParser.json());
 
 var port = process.env.PORT || 9000; // set our port
-// mongoose.connect(db.url); // connect to our mongoDB database (commented out after you enter in your own credentials)
 
 // create a write stream (in append mode)
 var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
@@ -64,7 +49,7 @@ app.post('/personnelwebsite',function(req,res){
     })
 });
 
-app.post('/sendFeedbackMail',function(req,res){
+/*app.post('/sendFeedbackMail',function(req,res){
     console.log('asasasasas',req.body);
     var data = "name:  " +req.body.data.name  +   "  email:  " +req.body.data.email   +  "    phone:  "   +  req.body.data.phone + "   message:  " + req.body.data.message;
     if(req.body){
@@ -86,9 +71,7 @@ app.post('/sendFeedbackMail',function(req,res){
         });
     }
 
-})
-
-
+})*/
 
 
 // routes ==================================================

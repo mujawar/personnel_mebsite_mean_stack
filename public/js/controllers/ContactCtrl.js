@@ -19,10 +19,10 @@ angular.module('ContactCtrl', []).controller('ContactController', function($scop
                 data: $scope.contact
             };
             console.log('mailOptions' +JSON.stringify(mailOptions));
-            $http.post('/sendFeedbackMail',mailOptions).success(function(result) {
+           /* $http.post('/sendFeedbackMail',mailOptions).success(function(result) {
                 console.log('result' + JSON.stringify(result));
             })
-
+*/
             $scope.contact = ''
 
 
