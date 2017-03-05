@@ -3,9 +3,7 @@
  */
 angular.module('ContactCtrl', []).controller('ContactController', function ($scope, $http) {
     console.log('initailazing contact');
-
     $scope.tagline = 'The square root of life is pi!';
-
     $scope.submitData = function () {
         console.log('calling submitData');
         console.log('data' + JSON.stringify($scope.contact));
