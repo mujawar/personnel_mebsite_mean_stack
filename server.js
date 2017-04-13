@@ -22,7 +22,6 @@ var path = require('path');
     }
 });*/
 
-
 app.use(bodyParser.json());
 
 var port = process.env.PORT || 9000; // set our port
@@ -72,8 +71,6 @@ app.post('/personnelwebsite',function(req,res){
     }
 
 })*/
-
-
 // routes ==================================================
 require('./app/routes')(app); // pass our application into our routes
 
