@@ -10,7 +10,7 @@
     "morgan": "^1.7.0",
     "mongojs": "latest",
     "path": "^0.12.7",
-    "nodemailer":"latest"
+    "nodemailer": "latest"
   },
   "devDependencies": {
     "grunt": "~1.0.1"
